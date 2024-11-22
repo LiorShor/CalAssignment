@@ -71,14 +71,14 @@
 		BA8789D62CF0733B00B0CF2B /* CalAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				BA8789DB2CF0734A00B0CF2B /* Assets.xcassets */,
 				BA8789D72CF0733B00B0CF2B /* CalAssignmentApp.swift */,
 				BA8789D92CF0733B00B0CF2B /* ContentView.swift */,
-				BA8789DB2CF0734A00B0CF2B /* Assets.xcassets */,
-				BA878A002CF0AE6C00B0CF2B /* Utils */,
 				BA8789E52CF075A900B0CF2B /* Models */,
 				BA8789E82CF075BE00B0CF2B /* Modules */,
 				BA8789DD2CF0734A00B0CF2B /* Preview Content */,
 				BA8789EA2CF075D600B0CF2B /* Repositories */,
+				BA878A002CF0AE6C00B0CF2B /* Utils */,
 				BA8789E72CF075B400B0CF2B /* Views */,
 			);
 			path = CalAssignment;
