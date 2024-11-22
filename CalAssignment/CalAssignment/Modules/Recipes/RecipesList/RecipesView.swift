@@ -20,24 +20,29 @@ struct RecipesView: View {
             VStack(alignment: .leading) {
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: 20) {
-                         ForEach(viewModel.recipes) { recipe in
+                        ForEach(viewModel.recipes) { recipe in
                             RecipeView(recipe: recipe)
-                                 .onTapGesture {
-                                     viewModel.didTapRecipe(with: recipe)
-                                 }
+                                .onTapGesture {
+                                    viewModel.didTapRecipe(with: recipe)
+                                }
                         }
                     }
                     .padding()
                 }
             }
-        }.fullScreenCover(isPresented: $viewModel.isRecipeDetailsPresented, content: {
+        }.fullScreenCover(isPresented: $viewModel.isRecipeDetailsPresented) {
             NavigationView{
                 RecipeDetails(viewModel: RecipeDetailsViewModel(encryptedRecipe: viewModel.selectedEncryptedRecipe))
-                    .navigationBarItems(leading: Button("Back") {
+                    .navigationBarItems(leading: Button(action: {
                         viewModel.isRecipeDetailsPresented.toggle()
+                    }, label: {
+                        Image(systemName: "arrow.left.circle.fill")
+                            .font(.title)
+                            .foregroundColor(.secondary)
                     })
+                    )
             }
-        })
+        }
     }
 }
 
