@@ -10,8 +10,24 @@ import SwiftUI
 struct RecipesView: View {
     @ObservedObject var viewModel: RecipesViewModel
     
+    let columns = [
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack(alignment: .leading) {
+                ScrollView {
+                    LazyVGrid(columns: columns, spacing: 20) {
+                         ForEach(viewModel.recipes) { recipe in
+                            RecipeView(url: recipe.thumb, name: recipe.name, fatsAmount: recipe.fats, calories: recipe.calories, carbos: recipe.carbos)
+                        }
+                    }
+                    .padding()
+                }
+            }
+        }
     }
 }
 
