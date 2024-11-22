@@ -10,6 +10,8 @@ import Combine
 
 class RecipesViewModel: ObservableObject {
     @Published var recipes: [Recipe] = []
+    @Published var selectedRecipe: Recipe?
+    @Published var isRecipeDetailsPresented: Bool = false
     private let repository: RecipesRepository
     private var cancellables: Set<AnyCancellable> = []
     
@@ -25,5 +27,10 @@ class RecipesViewModel: ObservableObject {
             } receiveValue: { recipes in
                 self.recipes = recipes
             }.store(in: &cancellables)
+    }
+    
+    func didTapRecipe(with recipe: Recipe) {
+        selectedRecipe = recipe
+        isRecipeDetailsPresented.toggle()
     }
 }
