@@ -15,6 +15,7 @@
 		BA8789F12CF07D8200B0CF2B /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8789F02CF07D8200B0CF2B /* Recipe.swift */; };
 		BA8789F42CF07F9000B0CF2B /* RecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8789F32CF07F9000B0CF2B /* RecipesView.swift */; };
 		BA8789F62CF07F9A00B0CF2B /* RecipesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8789F52CF07F9900B0CF2B /* RecipesViewModel.swift */; };
+		BA8789F82CF0816100B0CF2B /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8789F72CF0816100B0CF2B /* RecipeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		BA8789F02CF07D8200B0CF2B /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		BA8789F32CF07F9000B0CF2B /* RecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesView.swift; sourceTree = "<group>"; };
 		BA8789F52CF07F9900B0CF2B /* RecipesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewModel.swift; sourceTree = "<group>"; };
+		BA8789F72CF0816100B0CF2B /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			children = (
 				BA8789F32CF07F9000B0CF2B /* RecipesView.swift */,
 				BA8789F52CF07F9900B0CF2B /* RecipesViewModel.swift */,
+				BA8789F72CF0816100B0CF2B /* RecipeView.swift */,
 			);
 			path = Recipes;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				BA8789F62CF07F9A00B0CF2B /* RecipesViewModel.swift in Sources */,
 				BA8789EE2CF079B500B0CF2B /* RecipesRepository.swift in Sources */,
 				BA8789DA2CF0733B00B0CF2B /* ContentView.swift in Sources */,
+				BA8789F82CF0816100B0CF2B /* RecipeView.swift in Sources */,
 				BA8789F42CF07F9000B0CF2B /* RecipesView.swift in Sources */,
 				BA8789D82CF0733B00B0CF2B /* CalAssignmentApp.swift in Sources */,
 				BA8789F12CF07D8200B0CF2B /* Recipe.swift in Sources */,
