@@ -21,13 +21,23 @@ struct RecipesView: View {
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: 20) {
                          ForEach(viewModel.recipes) { recipe in
-                            RecipeView(url: recipe.thumb, name: recipe.name, fatsAmount: recipe.fats, calories: recipe.calories, carbos: recipe.carbos)
+                            RecipeView(url: recipe.thumbURL, name: recipe.name, fatsAmount: recipe.fats, calories: recipe.calories, carbos: recipe.carbos)
+                                 .onTapGesture {
+                                     viewModel.didTapRecipe(with: recipe)
+                                 }
                         }
                     }
                     .padding()
                 }
             }
-        }
+        }.fullScreenCover(isPresented: $viewModel.isRecipeDetailsPresented, content: {
+            NavigationView{
+                RecipeDetails(recipe: viewModel.selectedRecipe)
+                    .navigationBarItems(leading: Button("Back") {
+                        viewModel.isRecipeDetailsPresented.toggle()
+                    })
+            }
+        })
     }
 }
 
