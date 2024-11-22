@@ -8,15 +8,11 @@
 import SwiftUI
 
 struct RecipeView: View {
-    var url: URL
-    var name: String
-    var fatsAmount: String
-    var calories: String
-    var carbos: String
+    var recipe: Recipe
     
     var body: some View {
         VStack(spacing: 0) {
-            AsyncImage(url: url) { image in
+            AsyncImage(url: recipe.thumbURL) { image in
                 image.resizable()
             } placeholder: {
                 ProgressView()
@@ -32,14 +28,14 @@ struct RecipeView: View {
                 )
             )
             VStack(alignment: .leading) {
-                Text(name)
+                Text(recipe.name)
                     .font(.title)
                     .lineLimit(3)
                 Spacer()
                 VStack(alignment: .leading, spacing: 0) {
-                    Text("Calories: \(calories)")
-                    Text("Fats: \(fatsAmount)")
-                    Text("Carbos: \(carbos)")
+                    Text("Calories: \(recipe.calories)")
+                    Text("Fats: \(recipe.fats)")
+                    Text("Carbos: \(recipe.carbos)")
                 }
                 .font(.footnote)
             }
@@ -54,5 +50,5 @@ struct RecipeView: View {
 }
 
 #Preview {
-    RecipeView(url: URL(string: "https://img.hellofresh.com/f_auto,q_auto,w_300/hellofresh_s3/image/533143aaff604d567f8b4571.jpg")!, name: "Title", fatsAmount: "2 grams", calories: "26 grams", carbos: "47 grams")
+    RecipeView(recipe: Recipe(id: "1", name: "Name", calories: "2 grams", carbos: "3 grams", description: "This is a description", headline: "headline", proteins: "4 grams", time: "PT35M", fats: "6 grams", difficulty: 2, imageURL: URL(string: "https://img.hellofresh.com/f_auto,q_auto/hellofresh_s3/image/533143aaff604d567f8b4571.jpg")!, thumbURL: URL(string: "https://img.hellofresh.com/f_auto,q_auto,w_300/hellofresh_s3/image/533143aaff604d567f8b4571.jpg")!))
 }
