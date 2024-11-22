@@ -12,7 +12,7 @@ struct RecipeView: View {
     var name: String
     var fatsAmount: String
     var calories: String
-    var carbons: String
+    var carbos: String
     
     var body: some View {
         VStack(spacing: 0) {
@@ -37,7 +37,7 @@ struct RecipeView: View {
                 VStack(alignment: .leading) {
                     Text("Calories: \(calories)")
                     Text("Fats: \(fatsAmount)")
-                    Text("Carbons: \(carbons)")
+                    Text("Carbos: \(carbos)")
                 }
                 .font(.footnote)
             }
@@ -49,5 +49,5 @@ struct RecipeView: View {
 }
 
 #Preview {
-    RecipeView(url: URL(string: "https://img.hellofresh.com/f_auto,q_auto,w_300/hellofresh_s3/image/533143aaff604d567f8b4571.jpg")!, name: "Title", fatsAmount: "2 grams", calories: "26 grams", carbons: "47 grams")
+    RecipeView(url: URL(string: "https://img.hellofresh.com/f_auto,q_auto,w_300/hellofresh_s3/image/533143aaff604d567f8b4571.jpg")!, name: "Title", fatsAmount: "2 grams", calories: "26 grams", carbos: "47 grams")
 }

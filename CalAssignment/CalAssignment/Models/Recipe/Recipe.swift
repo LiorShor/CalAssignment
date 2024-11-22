@@ -11,7 +11,7 @@ struct Recipe: Codable {
     let id: String
     let name: String
     let calories: String
-    let carbs: String
+    let carbos: String
     let description: String
     let headline: String
     let proteins: String
