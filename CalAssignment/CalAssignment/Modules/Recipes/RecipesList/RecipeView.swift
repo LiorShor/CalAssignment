@@ -18,7 +18,7 @@ struct RecipeView: View {
                 ProgressView()
                     .controlSize(.large)
             }
-            .frame(width: 150, height: 100)
+            .frame(height: 100)
             .clipShape(
                 .rect(
                     topLeadingRadius: 10,
@@ -43,7 +43,7 @@ struct RecipeView: View {
         .frame(width: 150, height: 250)
         .overlay(
             RoundedRectangle(cornerRadius: 10)
-                .stroke(Color.black, lineWidth: 1)
+                .stroke(Color.primary, lineWidth: 1)
         )
         
     }
