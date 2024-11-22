@@ -12,6 +12,7 @@
 		BA8789DC2CF0734A00B0CF2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA8789DB2CF0734A00B0CF2B /* Assets.xcassets */; };
 		BA8789DF2CF0734A00B0CF2B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA8789DE2CF0734A00B0CF2B /* Preview Assets.xcassets */; };
 		BA8789EE2CF079B500B0CF2B /* RecipesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8789ED2CF079B500B0CF2B /* RecipesRepository.swift */; };
+		BA8789F12CF07D8200B0CF2B /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8789F02CF07D8200B0CF2B /* Recipe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		BA8789DB2CF0734A00B0CF2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA8789DE2CF0734A00B0CF2B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BA8789ED2CF079B500B0CF2B /* RecipesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesRepository.swift; sourceTree = "<group>"; };
+		BA8789F02CF07D8200B0CF2B /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		BA8789E52CF075A900B0CF2B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BA8789EF2CF07D7700B0CF2B /* Recipe */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -100,6 +103,14 @@
 				BA8789ED2CF079B500B0CF2B /* RecipesRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		BA8789EF2CF07D7700B0CF2B /* Recipe */ = {
+			isa = PBXGroup;
+			children = (
+				BA8789F02CF07D8200B0CF2B /* Recipe.swift */,
+			);
+			path = Recipe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +186,7 @@
 				BA8789EE2CF079B500B0CF2B /* RecipesRepository.swift in Sources */,
 				BA8789DA2CF0733B00B0CF2B /* ContentView.swift in Sources */,
 				BA8789D82CF0733B00B0CF2B /* CalAssignmentApp.swift in Sources */,
+				BA8789F12CF07D8200B0CF2B /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
