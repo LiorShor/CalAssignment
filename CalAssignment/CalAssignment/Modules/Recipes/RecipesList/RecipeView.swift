@@ -28,15 +28,15 @@ struct RecipeView: View {
                 )
             )
             VStack {
-                Text(recipe.name)
+                Text(recipe.name ?? .empty)
                     .font(.title3)
                     .lineLimit(3)
                     .multilineTextAlignment(.center)
                 Spacer()
                 VStack(spacing: 0) {
-                    Text("Calories: \(recipe.calories)")
-                    Text("Fats: \(recipe.fats)")
-                    Text("Carbos: \(recipe.carbos)")
+                    Text("Calories: \(recipe.calories ?? .empty)")
+                    Text("Fats: \(recipe.fats ?? .empty)")
+                    Text("Carbos: \(recipe.carbos ?? .empty)")
                 }
                 .font(.footnote)
                 .multilineTextAlignment(.leading)

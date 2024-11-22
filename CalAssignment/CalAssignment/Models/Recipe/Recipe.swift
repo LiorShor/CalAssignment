@@ -8,18 +8,18 @@
 import Foundation
 
 struct Recipe: Codable, Identifiable {
-    let id: String
-    let name: String
-    let calories: String
-    let carbos: String
-    let description: String
-    let headline: String
-    let proteins: String
-    let time: String
-    let fats: String
-    let difficulty: Int
-    let imageURL: URL
-    let thumbURL: URL
+    let id: String?
+    let name: String?
+    let calories: String?
+    let carbos: String?
+    let description: String?
+    let headline: String?
+    let proteins: String?
+    let time: String?
+    let fats: String?
+    let difficulty: Int?
+    let imageURL: URL?
+    let thumbURL: URL?
 
     enum CodingKeys: String, CodingKey {
         case imageURL = "image"
