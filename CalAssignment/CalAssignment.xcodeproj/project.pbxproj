@@ -19,6 +19,8 @@
 		BA8789FB2CF0A1DF00B0CF2B /* RecipeDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8789FA2CF0A1DF00B0CF2B /* RecipeDetails.swift */; };
 		BA8789FE2CF0A1FD00B0CF2B /* RecipeDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8789FD2CF0A1FD00B0CF2B /* RecipeDetailsViewModel.swift */; };
 		BA878A032CF0AE8100B0CF2B /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA878A022CF0AE8100B0CF2B /* String+Extension.swift */; };
+		BA878A062CF0B12B00B0CF2B /* CryptoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA878A052CF0B12B00B0CF2B /* CryptoHelper.swift */; };
+		BA878A082CF0B15400B0CF2B /* BiometricHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA878A072CF0B15400B0CF2B /* BiometricHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		BA8789FA2CF0A1DF00B0CF2B /* RecipeDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetails.swift; sourceTree = "<group>"; };
 		BA8789FD2CF0A1FD00B0CF2B /* RecipeDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewModel.swift; sourceTree = "<group>"; };
 		BA878A022CF0AE8100B0CF2B /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		BA878A052CF0B12B00B0CF2B /* CryptoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoHelper.swift; sourceTree = "<group>"; };
+		BA878A072CF0B15400B0CF2B /* BiometricHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +162,7 @@
 		BA878A002CF0AE6C00B0CF2B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				BA878A042CF0B0EB00B0CF2B /* Helpers */,
 				BA878A012CF0AE7500B0CF2B /* Extensions */,
 			);
 			path = Utils;
@@ -169,6 +174,15 @@
 				BA878A022CF0AE8100B0CF2B /* String+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BA878A042CF0B0EB00B0CF2B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BA878A052CF0B12B00B0CF2B /* CryptoHelper.swift */,
+				BA878A072CF0B15400B0CF2B /* BiometricHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +256,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA8789F62CF07F9A00B0CF2B /* RecipesViewModel.swift in Sources */,
+				BA878A062CF0B12B00B0CF2B /* CryptoHelper.swift in Sources */,
+				BA878A082CF0B15400B0CF2B /* BiometricHelper.swift in Sources */,
 				BA8789EE2CF079B500B0CF2B /* RecipesRepository.swift in Sources */,
 				BA8789DA2CF0733B00B0CF2B /* ContentView.swift in Sources */,
 				BA8789F82CF0816100B0CF2B /* RecipeView.swift in Sources */,
@@ -387,6 +403,7 @@
 				DEVELOPMENT_TEAM = LMNQ8K7V9N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need Face ID or Touch ID to securely encrypt and decrypt recipe data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -416,6 +433,7 @@
 				DEVELOPMENT_TEAM = LMNQ8K7V9N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need Face ID or Touch ID to securely encrypt and decrypt recipe data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
