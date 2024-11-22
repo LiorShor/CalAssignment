@@ -20,7 +20,7 @@ struct RecipesRepository {
         guard let url = URL(string: urlString) else { return Fail(error: NetworkError.badUrl).eraseToAnyPublisher() }
         return URLSession.shared.dataTaskPublisher(for: url)
             .map(\.data)
-            .decode(type: [Recipe], decoder: JSONDecoder())
+            .decode(type: [Recipe].self, decoder: JSONDecoder())
             .receive(on: DispatchQueue.main)
             .catch { error -> AnyPublisher<[Recipe], Error> in
                 return Just([]).setFailureType(to: Error.self).eraseToAnyPublisher()
