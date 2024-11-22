@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RecipeDetails: View {
     @ObservedObject var viewModel: RecipeDetailsViewModel
+    @Binding var isPresented: Bool
     
     var body: some View {
         // Request biometric authentication and decrypt
@@ -48,13 +49,22 @@ struct RecipeDetails: View {
                 }.ignoresSafeArea()
             }
         case .failure:
-            Text("Failure")
+            Image(systemName: "x.circle.fill")
+                .resizable()
+                .frame(width: 200, height: 200)
+                .foregroundColor(.secondary)
+            Text("Could not load you dish 🥺")
                 .font(.body)
                 .padding()
+            Button("Back") {
+                isPresented.toggle()
+            }
+            .buttonStyle(BorderedButtonStyle())
+            .foregroundColor(.secondary)
         }
     }
 }
 
 #Preview {
-    RecipeDetails(viewModel: RecipeDetailsViewModel(encryptedRecipe: CryptoHelper.encrypt(recipe: Recipe(id: "1", name: "Name", calories: "2 grams", carbos: "3 grams", description: "This is a description", headline: "headline", proteins: "4 grams", time: "PT35M", fats: "6 grams", difficulty: 2, imageURL: URL(string: "https://img.hellofresh.com/f_auto,q_auto/hellofresh_s3/image/533143aaff604d567f8b4571.jpg")!, thumbURL: URL(string: "https://img.hellofresh.com/f_auto,q_auto,w_300/hellofresh_s3/image/533143aaff604d567f8b4571.jpg")!)) ?? .empty))
+    RecipeDetails(viewModel: RecipeDetailsViewModel(encryptedRecipe: CryptoHelper.encrypt(recipe: Recipe(id: "1", name: "Name", calories: "2 grams", carbos: "3 grams", description: "This is a description", headline: "headline", proteins: "4 grams", time: "PT35M", fats: "6 grams", difficulty: 2, imageURL: URL(string: "https://img.hellofresh.com/f_auto,q_auto/hellofresh_s3/image/533143aaff604d567f8b4571.jpg")!, thumbURL: URL(string: "https://img.hellofresh.com/f_auto,q_auto,w_300/hellofresh_s3/image/533143aaff604d567f8b4571.jpg")!)) ?? .empty), isPresented: .constant(true))
 }

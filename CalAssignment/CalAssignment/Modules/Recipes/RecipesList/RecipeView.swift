@@ -27,17 +27,19 @@ struct RecipeView: View {
                     topTrailingRadius: 10
                 )
             )
-            VStack(alignment: .leading) {
+            VStack {
                 Text(recipe.name)
-                    .font(.title)
+                    .font(.title3)
                     .lineLimit(3)
+                    .multilineTextAlignment(.center)
                 Spacer()
-                VStack(alignment: .leading, spacing: 0) {
+                VStack(spacing: 0) {
                     Text("Calories: \(recipe.calories)")
                     Text("Fats: \(recipe.fats)")
                     Text("Carbos: \(recipe.carbos)")
                 }
                 .font(.footnote)
+                .multilineTextAlignment(.leading)
             }
         }
         .frame(width: 150, height: 250)

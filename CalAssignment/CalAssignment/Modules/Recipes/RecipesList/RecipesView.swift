@@ -18,6 +18,8 @@ struct RecipesView: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
+                Text("Recipes")
+                    .font(.title)
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: 20) {
                         ForEach(viewModel.recipes) { recipe in
@@ -32,7 +34,7 @@ struct RecipesView: View {
             }
         }.fullScreenCover(isPresented: $viewModel.isRecipeDetailsPresented) {
             NavigationView{
-                RecipeDetails(viewModel: RecipeDetailsViewModel(encryptedRecipe: viewModel.selectedEncryptedRecipe))
+                RecipeDetails(viewModel: RecipeDetailsViewModel(encryptedRecipe: viewModel.selectedEncryptedRecipe), isPresented: $viewModel.isRecipeDetailsPresented)
                     .navigationBarItems(leading: Button(action: {
                         viewModel.isRecipeDetailsPresented.toggle()
                     }, label: {
