@@ -34,17 +34,22 @@ struct RecipeView: View {
             VStack(alignment: .leading) {
                 Text(name)
                     .font(.title)
-                VStack(alignment: .leading) {
+                    .lineLimit(3)
+                Spacer()
+                VStack(alignment: .leading, spacing: 0) {
                     Text("Calories: \(calories)")
                     Text("Fats: \(fatsAmount)")
                     Text("Carbos: \(carbos)")
                 }
                 .font(.footnote)
             }
-        }.overlay(
+        }
+        .frame(width: 150, height: 250)
+        .overlay(
             RoundedRectangle(cornerRadius: 10)
                 .stroke(Color.black, lineWidth: 1)
         )
+        
     }
 }
 
