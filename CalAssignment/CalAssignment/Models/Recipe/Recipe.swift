@@ -18,6 +18,21 @@ struct Recipe: Codable, Identifiable {
     let time: String
     let fats: String
     let difficulty: Int
-    let image: URL
-    let thumb: URL
+    let imageURL: URL
+    let thumbURL: URL
+
+    enum CodingKeys: String, CodingKey {
+        case imageURL = "image"
+        case thumbURL = "thumb"
+        case id
+        case name
+        case calories
+        case carbos
+        case description
+        case headline
+        case proteins
+        case time
+        case fats
+        case difficulty
+    }
 }
