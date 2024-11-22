@@ -16,7 +16,35 @@ struct RecipeDetails: View {
     var imageURL: URL
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GeometryReader { geometry in
+            VStack {
+                AsyncImage(url: imageURL) { image in
+                    image.resizable()
+                        .scaledToFill()
+                } placeholder: {
+                    ProgressView()
+                        .controlSize(.large)
+                }
+                .frame(height: geometry.size.height * 0.333)
+                .clipped() // Make sure the image doesn't overflow
+                .overlay(
+                    LinearGradient(
+                        gradient: Gradient(colors: [Color.white.opacity(0.6), Color.clear]),
+                        startPoint: .bottom,
+                        endPoint: .top
+                    )
+                    .frame(height: geometry.size.height * 0.333)
+                )
+                VStack(alignment: .leading) {
+                    Text(name)
+                        .font(.title)
+                    Text("Fats: \(fats) | Calories: \(calories) | Carbos: \(carbos)")
+                        .font(.footnote)
+                    Text(description)
+                        .font(.body)
+                }.padding(.horizontal)
+            }.ignoresSafeArea()
+        }
     }
 }
 
