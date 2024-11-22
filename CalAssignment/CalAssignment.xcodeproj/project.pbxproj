@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BA8789D82CF0733B00B0CF2B /* CalAssignmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8789D72CF0733B00B0CF2B /* CalAssignmentApp.swift */; };
-		BA8789DA2CF0733B00B0CF2B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8789D92CF0733B00B0CF2B /* ContentView.swift */; };
 		BA8789DC2CF0734A00B0CF2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA8789DB2CF0734A00B0CF2B /* Assets.xcassets */; };
 		BA8789DF2CF0734A00B0CF2B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA8789DE2CF0734A00B0CF2B /* Preview Assets.xcassets */; };
 		BA8789EE2CF079B500B0CF2B /* RecipesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8789ED2CF079B500B0CF2B /* RecipesRepository.swift */; };
@@ -26,7 +25,6 @@
 /* Begin PBXFileReference section */
 		BA8789D42CF0733B00B0CF2B /* CalAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA8789D72CF0733B00B0CF2B /* CalAssignmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalAssignmentApp.swift; sourceTree = "<group>"; };
-		BA8789D92CF0733B00B0CF2B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BA8789DB2CF0734A00B0CF2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA8789DE2CF0734A00B0CF2B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BA8789ED2CF079B500B0CF2B /* RecipesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesRepository.swift; sourceTree = "<group>"; };
@@ -73,7 +71,6 @@
 			children = (
 				BA8789DB2CF0734A00B0CF2B /* Assets.xcassets */,
 				BA8789D72CF0733B00B0CF2B /* CalAssignmentApp.swift */,
-				BA8789D92CF0733B00B0CF2B /* ContentView.swift */,
 				BA8789E52CF075A900B0CF2B /* Models */,
 				BA8789E82CF075BE00B0CF2B /* Modules */,
 				BA8789DD2CF0734A00B0CF2B /* Preview Content */,
@@ -259,7 +256,6 @@
 				BA878A062CF0B12B00B0CF2B /* CryptoHelper.swift in Sources */,
 				BA878A082CF0B15400B0CF2B /* BiometricHelper.swift in Sources */,
 				BA8789EE2CF079B500B0CF2B /* RecipesRepository.swift in Sources */,
-				BA8789DA2CF0733B00B0CF2B /* ContentView.swift in Sources */,
 				BA8789F82CF0816100B0CF2B /* RecipeView.swift in Sources */,
 				BA8789FE2CF0A1FD00B0CF2B /* RecipeDetailsViewModel.swift in Sources */,
 				BA8789FB2CF0A1DF00B0CF2B /* RecipeDetails.swift in Sources */,
