@@ -32,7 +32,7 @@ struct RecipesView: View {
             }
         }.fullScreenCover(isPresented: $viewModel.isRecipeDetailsPresented, content: {
             NavigationView{
-                RecipeDetails(recipe: viewModel.selectedRecipe)
+                RecipeDetails(encryptedRecipe: viewModel.selectedEncryptedRecipe)
                     .navigationBarItems(leading: Button("Back") {
                         viewModel.isRecipeDetailsPresented.toggle()
                     })
