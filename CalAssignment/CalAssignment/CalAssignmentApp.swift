@@ -11,7 +11,7 @@ import SwiftUI
 struct CalAssignmentApp: App {
     var body: some Scene {
         WindowGroup {
-            RecipesView(viewModel: RecipesViewModel(repository: RecipesRepository(recipeService: RecipeClient())))
+            RecipesNavigator.ContentView(navigator: RecipesNavigator())
         }
     }
 }
