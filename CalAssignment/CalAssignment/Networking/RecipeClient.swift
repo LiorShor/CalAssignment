@@ -13,11 +13,12 @@ enum NetworkError: Error {
     case noData
 }
 
-protocol RecipeServiceProtocol {
+protocol RecipeServicable: AnyObject {
     func fetchRecipes() -> AnyPublisher<[Recipe], Error>
 }
 
-struct RecipeClient: RecipeServiceProtocol {
+class RecipeClient: RecipeServicable {
+    
     func fetchRecipes() -> AnyPublisher<[Recipe], Error> {
         let urlString: String = "https://hf-android-app.s3-eu-west-1.amazonaws.com/android-test/recipes.json"
         

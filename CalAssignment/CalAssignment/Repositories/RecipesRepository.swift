@@ -8,15 +8,22 @@
 import Foundation
 import Combine
 
-protocol RecipesRepositoryProtocol {
+protocol RecipesRepositoriable: AnyObject {
     func fetchRecipes() -> AnyPublisher<[Recipe], Error>
 }
 
-struct RecipesRepository: RecipesRepositoryProtocol {
-    let recipeService: RecipeServiceProtocol
+class RecipesRepository: RecipesRepositoriable {
+    var recipeService: RecipeServicable?
 
+    init(recipeService: RecipeServicable? = nil) {
+        self.recipeService = recipeService
+    }
+    
     func fetchRecipes() -> AnyPublisher<[Recipe], any Error> {
-        recipeService.fetchRecipes()
+        guard let recipeService else {
+            return Just([]).setFailureType(to: Error.self).eraseToAnyPublisher()
+        }
+        return recipeService.fetchRecipes()
             .map { recipes in
                 return recipes // in case we want to do filtering.
             }
