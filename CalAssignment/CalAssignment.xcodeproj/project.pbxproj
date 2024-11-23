@@ -22,6 +22,7 @@
 		BACD14102CF1C45B0030E5A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BACD140B2CF1C45B0030E5A2 /* Preview Assets.xcassets */; };
 		BACD14482CF1C6CB0030E5A2 /* RecipeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACD14472CF1C6CB0030E5A2 /* RecipeClient.swift */; };
 		BACD144F2CF1DCFF0030E5A2 /* RecipesNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACD144E2CF1DCFF0030E5A2 /* RecipesNavigator.swift */; };
+		BACD14562CF1F4F10030E5A2 /* RecipeDetailsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACD14552CF1F4F10030E5A2 /* RecipeDetailsItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		BACD140D2CF1C45B0030E5A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BACD14472CF1C6CB0030E5A2 /* RecipeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeClient.swift; sourceTree = "<group>"; };
 		BACD144E2CF1DCFF0030E5A2 /* RecipesNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesNavigator.swift; sourceTree = "<group>"; };
+		BACD14552CF1F4F10030E5A2 /* RecipeDetailsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				BA8789FA2CF0A1DF00B0CF2B /* RecipeDetails.swift */,
+				BACD14552CF1F4F10030E5A2 /* RecipeDetailsItem.swift */,
 				BA8789FD2CF0A1FD00B0CF2B /* RecipeDetailsViewModel.swift */,
 			);
 			path = RecipeDetails;
@@ -283,6 +286,7 @@
 				BA8789FE2CF0A1FD00B0CF2B /* RecipeDetailsViewModel.swift in Sources */,
 				BA8789FB2CF0A1DF00B0CF2B /* RecipeDetails.swift in Sources */,
 				BA8789F42CF07F9000B0CF2B /* RecipesView.swift in Sources */,
+				BACD14562CF1F4F10030E5A2 /* RecipeDetailsItem.swift in Sources */,
 				BACD14482CF1C6CB0030E5A2 /* RecipeClient.swift in Sources */,
 				BA8789D82CF0733B00B0CF2B /* CalAssignmentApp.swift in Sources */,
 				BA878A032CF0AE8100B0CF2B /* String+Extension.swift in Sources */,

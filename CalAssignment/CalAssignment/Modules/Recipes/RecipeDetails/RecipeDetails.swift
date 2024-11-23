@@ -15,6 +15,19 @@ struct RecipeDetails: View {
         // Request biometric authentication and decrypt
         switch viewModel.authenticationStatus {
         case .locked:
+            LockedView()
+        case .authenticating:
+            Text("Authenticating...")
+                .font(.body)
+        case .authenticated:
+            RecipeDetailsItem(recipe: viewModel.recipe)
+        case .failure:
+            ErrorView(message: "Could not load your dish 🥺")
+        }
+    }
+
+    private func LockedView() -> some View {
+        VStack {
             Text("Recipe is locked")
                 .font(.body)
             Button("Unlock") {
@@ -22,44 +35,8 @@ struct RecipeDetails: View {
             }
             .buttonStyle(BorderedButtonStyle())
             .foregroundStyle(.secondary)
-        case .authenticating:
-            Text("Authenticating...")
-                .font(.body)
-        case .authenticated:
-            GeometryReader { geometry in
-                VStack {
-                    AsyncImage(url: viewModel.recipe?.imageURL) { image in
-                        image.resizable()
-                            .scaledToFill()
-                    } placeholder: {
-                        ProgressView()
-                            .controlSize(.large)
-                    }
-                    .frame(height: geometry.size.height * 0.333)
-                    .clipped() // Make sure image does not overflow
-                    .overlay(
-                        LinearGradient(
-                            gradient: Gradient(colors: [Color.white.opacity(0.6), Color.clear]),
-                            startPoint: .bottom,
-                            endPoint: .top
-                        )
-                        .frame(height: geometry.size.height * 0.333)
-                    )
-                    VStack(alignment: .leading) {
-                        Text(viewModel.recipe?.name ?? .empty)
-                            .font(.title)
-                        Text("Fats: \(viewModel.recipe?.fats ?? "") | Calories: \(viewModel.recipe?.calories ?? "") | Carbos: \(viewModel.recipe?.carbos ?? "")")
-                            .font(.footnote)
-                        Text(viewModel.recipe?.description ?? .empty)
-                            .font(.body)
-                    }.padding(.horizontal)
-                }.ignoresSafeArea()
-            }
-        case .failure:
-            ErrorView(message: "Could not load your dish 🥺")
         }
     }
-
     private func ErrorView(message: String) -> some View {
         VStack {
             Image(systemName: "x.circle.fill")
