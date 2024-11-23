@@ -16,7 +16,6 @@ struct RecipesView: View {
     ]
 
     var body: some View {
-        NavigationView {
             VStack {
                 switch viewModel.viewState {
                 case let .loaded(recipes):
@@ -45,24 +44,17 @@ struct RecipesView: View {
                         .controlSize(.large)
                 }
             }
-        }
-        .animation(.smooth, value: viewModel.viewState)
-        .fullScreenCover(isPresented: $viewModel.isRecipeDetailsPresented) {
-            NavigationView {
-                RecipeDetails(viewModel: RecipeDetailsViewModel(encryptedRecipe: viewModel.selectedEncryptedRecipe), isPresented: $viewModel.isRecipeDetailsPresented)
-                    .navigationBarItems(leading: Button(action: {
-                        viewModel.isRecipeDetailsPresented.toggle()
-                    }, label: {
-                        Image(systemName: "arrow.left.circle.fill")
-                            .font(.title)
-                            .foregroundColor(.secondary)
-                    })
-                    )
-            }
-        }
+            .navigationDestination(for: Destination.self, destination: { destination in
+                switch destination {
+                case let .recipe(selectedEncryptedRecipe):
+                    RecipeDetails(viewModel: RecipeDetailsViewModel(encryptedRecipe: selectedEncryptedRecipe))
+                }
+            })
+            .navigationBarTitle("Recipes")
+            .animation(.smooth, value: viewModel.viewState)
     }
 }
 
 #Preview {
-    RecipesView(viewModel: RecipesViewModel(repository: RecipesRepository(recipeService: RecipeClient())))
+    RecipesView(viewModel: RecipesViewModel(repository: RecipesRepository(recipeService: RecipeClient()), router: RecipesNavigator()))
 }
