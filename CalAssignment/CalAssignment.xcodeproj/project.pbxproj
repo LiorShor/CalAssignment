@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BA8789D82CF0733B00B0CF2B /* CalAssignmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8789D72CF0733B00B0CF2B /* CalAssignmentApp.swift */; };
-		BA8789DC2CF0734A00B0CF2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA8789DB2CF0734A00B0CF2B /* Assets.xcassets */; };
-		BA8789DF2CF0734A00B0CF2B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA8789DE2CF0734A00B0CF2B /* Preview Assets.xcassets */; };
 		BA8789EE2CF079B500B0CF2B /* RecipesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8789ED2CF079B500B0CF2B /* RecipesRepository.swift */; };
 		BA8789F12CF07D8200B0CF2B /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8789F02CF07D8200B0CF2B /* Recipe.swift */; };
 		BA8789F42CF07F9000B0CF2B /* RecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8789F32CF07F9000B0CF2B /* RecipesView.swift */; };
@@ -20,13 +18,13 @@
 		BA878A032CF0AE8100B0CF2B /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA878A022CF0AE8100B0CF2B /* String+Extension.swift */; };
 		BA878A062CF0B12B00B0CF2B /* CryptoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA878A052CF0B12B00B0CF2B /* CryptoHelper.swift */; };
 		BA878A082CF0B15400B0CF2B /* BiometricHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA878A072CF0B15400B0CF2B /* BiometricHelper.swift */; };
+		BACD140F2CF1C45B0030E5A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BACD140D2CF1C45B0030E5A2 /* Assets.xcassets */; };
+		BACD14102CF1C45B0030E5A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BACD140B2CF1C45B0030E5A2 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BA8789D42CF0733B00B0CF2B /* CalAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA8789D72CF0733B00B0CF2B /* CalAssignmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalAssignmentApp.swift; sourceTree = "<group>"; };
-		BA8789DB2CF0734A00B0CF2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BA8789DE2CF0734A00B0CF2B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BA8789ED2CF079B500B0CF2B /* RecipesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesRepository.swift; sourceTree = "<group>"; };
 		BA8789F02CF07D8200B0CF2B /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		BA8789F32CF07F9000B0CF2B /* RecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesView.swift; sourceTree = "<group>"; };
@@ -37,6 +35,8 @@
 		BA878A022CF0AE8100B0CF2B /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		BA878A052CF0B12B00B0CF2B /* CryptoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoHelper.swift; sourceTree = "<group>"; };
 		BA878A072CF0B15400B0CF2B /* BiometricHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricHelper.swift; sourceTree = "<group>"; };
+		BACD140B2CF1C45B0030E5A2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BACD140D2CF1C45B0030E5A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,24 +69,15 @@
 		BA8789D62CF0733B00B0CF2B /* CalAssignment */ = {
 			isa = PBXGroup;
 			children = (
-				BA8789DB2CF0734A00B0CF2B /* Assets.xcassets */,
 				BA8789D72CF0733B00B0CF2B /* CalAssignmentApp.swift */,
 				BA8789E52CF075A900B0CF2B /* Models */,
 				BA8789E82CF075BE00B0CF2B /* Modules */,
-				BA8789DD2CF0734A00B0CF2B /* Preview Content */,
 				BA8789EA2CF075D600B0CF2B /* Repositories */,
 				BA878A002CF0AE6C00B0CF2B /* Utils */,
 				BA8789E72CF075B400B0CF2B /* Views */,
+				BACD140E2CF1C45B0030E5A2 /* Resources */,
 			);
 			path = CalAssignment;
-			sourceTree = "<group>";
-		};
-		BA8789DD2CF0734A00B0CF2B /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				BA8789DE2CF0734A00B0CF2B /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		BA8789E52CF075A900B0CF2B /* Models */ = {
@@ -182,6 +173,23 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		BACD140C2CF1C45B0030E5A2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				BACD140B2CF1C45B0030E5A2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BACD140E2CF1C45B0030E5A2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BACD140C2CF1C45B0030E5A2 /* Preview Content */,
+				BACD140D2CF1C45B0030E5A2 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -240,8 +248,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA8789DF2CF0734A00B0CF2B /* Preview Assets.xcassets in Resources */,
-				BA8789DC2CF0734A00B0CF2B /* Assets.xcassets in Resources */,
+				BACD140F2CF1C45B0030E5A2 /* Assets.xcassets in Resources */,
+				BACD14102CF1C45B0030E5A2 /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,7 +403,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CalAssignment/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CalAssignment/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = LMNQ8K7V9N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -425,7 +433,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CalAssignment/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CalAssignment/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = LMNQ8K7V9N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
