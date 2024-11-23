@@ -21,6 +21,7 @@
 		BACD140F2CF1C45B0030E5A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BACD140D2CF1C45B0030E5A2 /* Assets.xcassets */; };
 		BACD14102CF1C45B0030E5A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BACD140B2CF1C45B0030E5A2 /* Preview Assets.xcassets */; };
 		BACD14482CF1C6CB0030E5A2 /* RecipeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACD14472CF1C6CB0030E5A2 /* RecipeClient.swift */; };
+		BACD144F2CF1DCFF0030E5A2 /* RecipesNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACD144E2CF1DCFF0030E5A2 /* RecipesNavigator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		BACD140B2CF1C45B0030E5A2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BACD140D2CF1C45B0030E5A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BACD14472CF1C6CB0030E5A2 /* RecipeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeClient.swift; sourceTree = "<group>"; };
+		BACD144E2CF1DCFF0030E5A2 /* RecipesNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesNavigator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 		BA878A002CF0AE6C00B0CF2B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				BACD14522CF1DD080030E5A2 /* Navigators */,
 				BA878A042CF0B0EB00B0CF2B /* Helpers */,
 				BA878A012CF0AE7500B0CF2B /* Extensions */,
 			);
@@ -191,6 +194,14 @@
 				BACD14472CF1C6CB0030E5A2 /* RecipeClient.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		BACD14522CF1DD080030E5A2 /* Navigators */ = {
+			isa = PBXGroup;
+			children = (
+				BACD144E2CF1DCFF0030E5A2 /* RecipesNavigator.swift */,
+			);
+			path = Navigators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +279,7 @@
 				BA878A082CF0B15400B0CF2B /* BiometricHelper.swift in Sources */,
 				BA8789EE2CF079B500B0CF2B /* RecipesRepository.swift in Sources */,
 				BA8789F82CF0816100B0CF2B /* RecipeView.swift in Sources */,
+				BACD144F2CF1DCFF0030E5A2 /* RecipesNavigator.swift in Sources */,
 				BA8789FE2CF0A1FD00B0CF2B /* RecipeDetailsViewModel.swift in Sources */,
 				BA8789FB2CF0A1DF00B0CF2B /* RecipeDetails.swift in Sources */,
 				BA8789F42CF07F9000B0CF2B /* RecipesView.swift in Sources */,
