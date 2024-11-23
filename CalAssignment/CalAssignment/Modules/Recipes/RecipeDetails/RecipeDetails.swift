@@ -53,7 +53,7 @@ struct RecipeDetails: View {
                 .resizable()
                 .frame(width: 200, height: 200)
                 .foregroundColor(.secondary)
-            Text("Could not load you dish 🥺")
+            Text("Could not load your dish 🥺")
                 .font(.body)
                 .padding()
             Button("Back") {

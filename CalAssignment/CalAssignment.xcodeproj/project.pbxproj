@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -39,6 +39,10 @@
 		BACD140D2CF1C45B0030E5A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		BACD14462CF1C6BA0030E5A2 /* Networking */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Networking; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		BA8789D12CF0733B00B0CF2B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -73,8 +77,8 @@
 				BA8789E52CF075A900B0CF2B /* Models */,
 				BA8789E82CF075BE00B0CF2B /* Modules */,
 				BA8789EA2CF075D600B0CF2B /* Repositories */,
+				BACD14462CF1C6BA0030E5A2 /* Networking */,
 				BA878A002CF0AE6C00B0CF2B /* Utils */,
-				BA8789E72CF075B400B0CF2B /* Views */,
 				BACD140E2CF1C45B0030E5A2 /* Resources */,
 			);
 			path = CalAssignment;
@@ -86,13 +90,6 @@
 				BA8789EF2CF07D7700B0CF2B /* Recipe */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		BA8789E72CF075B400B0CF2B /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		BA8789E82CF075BE00B0CF2B /* Modules */ = {
@@ -204,6 +201,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				BACD14462CF1C6BA0030E5A2 /* Networking */,
 			);
 			name = CalAssignment;
 			productName = CalAssignment;
@@ -404,7 +404,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CalAssignment/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = LMNQ8K7V9N;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need Face ID or Touch ID to securely encrypt and decrypt recipe data";
@@ -434,7 +434,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CalAssignment/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = LMNQ8K7V9N;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need Face ID or Touch ID to securely encrypt and decrypt recipe data";

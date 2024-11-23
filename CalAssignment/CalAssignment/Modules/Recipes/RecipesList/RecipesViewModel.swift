@@ -9,9 +9,16 @@ import Foundation
 import Combine
 
 class RecipesViewModel: ObservableObject {
-    @Published var recipes: [Recipe] = []
+    enum ViewState: Equatable {
+        case loading
+        case loaded([Recipe])
+        case error
+    }
+    
     @Published var selectedEncryptedRecipe: String = .empty
     @Published var isRecipeDetailsPresented: Bool = false
+    @Published var viewState: ViewState = .loading
+    
     private let repository: RecipesRepository
     private var cancellables: Set<AnyCancellable> = []
     
@@ -22,10 +29,15 @@ class RecipesViewModel: ObservableObject {
     
     private func fetchRecipes() {
         repository.fetchRecipes()
-            .sink { _ in
-                
+            .sink { completion in
+                switch completion {
+                case .finished:
+                    break
+                case .failure:
+                    self.viewState = .error
+                }
             } receiveValue: { recipes in
-                self.recipes = recipes
+                self.viewState = .loaded(recipes)
             }.store(in: &cancellables)
     }
     func didTapRecipe(with recipe: Recipe) {

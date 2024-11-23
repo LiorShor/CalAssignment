@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Recipe: Codable, Identifiable {
+struct Recipe: Codable, Equatable, Identifiable {
     let id: String?
     let name: String?
     let calories: String?
