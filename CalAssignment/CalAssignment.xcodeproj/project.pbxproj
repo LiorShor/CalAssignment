@@ -76,10 +76,10 @@
 				BA8789D72CF0733B00B0CF2B /* CalAssignmentApp.swift */,
 				BA8789E52CF075A900B0CF2B /* Models */,
 				BA8789E82CF075BE00B0CF2B /* Modules */,
-				BA8789EA2CF075D600B0CF2B /* Repositories */,
 				BACD144B2CF1CB5A0030E5A2 /* Networking */,
-				BA878A002CF0AE6C00B0CF2B /* Utils */,
+				BA8789EA2CF075D600B0CF2B /* Repositories */,
 				BACD140E2CF1C45B0030E5A2 /* Resources */,
+				BA878A002CF0AE6C00B0CF2B /* Utils */,
 			);
 			path = CalAssignment;
 			sourceTree = "<group>";
