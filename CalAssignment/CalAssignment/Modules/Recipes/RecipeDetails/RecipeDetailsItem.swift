@@ -24,7 +24,7 @@ struct RecipeDetailsItem: View {
                 .clipped() // Make sure image does not overflow
                 .overlay(
                     LinearGradient(
-                        gradient: Gradient(colors: [Color.white.opacity(0.6), Color.clear]),
+                        gradient: Gradient(colors: [Color.primary.opacity(0.6), Color.clear]),
                         startPoint: .bottom,
                         endPoint: .top
                     )
