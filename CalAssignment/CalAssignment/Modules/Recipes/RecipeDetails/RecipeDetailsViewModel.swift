@@ -9,6 +9,7 @@ import Foundation
 import LocalAuthentication
 
 enum AuthenticationStatus {
+    case locked
     case authenticating
     case authenticated
     case failure
@@ -17,12 +18,11 @@ enum AuthenticationStatus {
 class RecipeDetailsViewModel: ObservableObject {
     
     var encryptedRecipe: String
-    @Published var authenticationStatus: AuthenticationStatus = .authenticating
+    @Published var authenticationStatus: AuthenticationStatus = .locked
     @Published var recipe: Recipe?
     
     init(encryptedRecipe: String) {
         self.encryptedRecipe = encryptedRecipe
-        authenticateAndDecrypt()
     }
     
     func authenticateAndDecrypt() {
