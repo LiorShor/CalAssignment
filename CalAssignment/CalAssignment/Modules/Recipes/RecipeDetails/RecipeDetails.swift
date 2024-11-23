@@ -56,11 +56,17 @@ struct RecipeDetails: View {
                 }.ignoresSafeArea()
             }
         case .failure:
+            ErrorView(message: "Could not load your dish 🥺")
+        }
+    }
+
+    private func ErrorView(message: String) -> some View {
+        VStack {
             Image(systemName: "x.circle.fill")
                 .resizable()
                 .frame(width: 200, height: 200)
                 .foregroundColor(.secondary)
-            Text("Could not load your dish 🥺")
+            Text(message)
                 .font(.body)
                 .padding()
             Button("Back") {
