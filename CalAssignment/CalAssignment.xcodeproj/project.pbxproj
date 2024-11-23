@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,7 @@
 		BA878A082CF0B15400B0CF2B /* BiometricHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA878A072CF0B15400B0CF2B /* BiometricHelper.swift */; };
 		BACD140F2CF1C45B0030E5A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BACD140D2CF1C45B0030E5A2 /* Assets.xcassets */; };
 		BACD14102CF1C45B0030E5A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BACD140B2CF1C45B0030E5A2 /* Preview Assets.xcassets */; };
+		BACD14482CF1C6CB0030E5A2 /* RecipeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACD14472CF1C6CB0030E5A2 /* RecipeClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,11 +38,8 @@
 		BA878A072CF0B15400B0CF2B /* BiometricHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricHelper.swift; sourceTree = "<group>"; };
 		BACD140B2CF1C45B0030E5A2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BACD140D2CF1C45B0030E5A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BACD14472CF1C6CB0030E5A2 /* RecipeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		BACD14462CF1C6BA0030E5A2 /* Networking */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Networking; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BA8789D12CF0733B00B0CF2B /* Frameworks */ = {
@@ -77,7 +75,7 @@
 				BA8789E52CF075A900B0CF2B /* Models */,
 				BA8789E82CF075BE00B0CF2B /* Modules */,
 				BA8789EA2CF075D600B0CF2B /* Repositories */,
-				BACD14462CF1C6BA0030E5A2 /* Networking */,
+				BACD144B2CF1CB5A0030E5A2 /* Networking */,
 				BA878A002CF0AE6C00B0CF2B /* Utils */,
 				BACD140E2CF1C45B0030E5A2 /* Resources */,
 			);
@@ -187,6 +185,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		BACD144B2CF1CB5A0030E5A2 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				BACD14472CF1C6CB0030E5A2 /* RecipeClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -201,9 +207,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				BACD14462CF1C6BA0030E5A2 /* Networking */,
 			);
 			name = CalAssignment;
 			productName = CalAssignment;
@@ -268,6 +271,7 @@
 				BA8789FE2CF0A1FD00B0CF2B /* RecipeDetailsViewModel.swift in Sources */,
 				BA8789FB2CF0A1DF00B0CF2B /* RecipeDetails.swift in Sources */,
 				BA8789F42CF07F9000B0CF2B /* RecipesView.swift in Sources */,
+				BACD14482CF1C6CB0030E5A2 /* RecipeClient.swift in Sources */,
 				BA8789D82CF0733B00B0CF2B /* CalAssignmentApp.swift in Sources */,
 				BA878A032CF0AE8100B0CF2B /* String+Extension.swift in Sources */,
 				BA8789F12CF07D8200B0CF2B /* Recipe.swift in Sources */,
@@ -404,7 +408,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CalAssignment/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = LMNQ8K7V9N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need Face ID or Touch ID to securely encrypt and decrypt recipe data";
@@ -434,7 +438,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CalAssignment/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = LMNQ8K7V9N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need Face ID or Touch ID to securely encrypt and decrypt recipe data";
